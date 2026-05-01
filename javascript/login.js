@@ -28,10 +28,3 @@ form.onsubmit = (e) => {
         alert("Invalid email or password");
     }
 };
-
-let SigninText = document.createElement("p");
-SigninText.innerHTML = `Don't have an account yet? 
-<a href="./signupproject.html">Signup</a>`;
-loginText.style.marginTop = "10px";
-
-myForm.appendChild(loginText);
