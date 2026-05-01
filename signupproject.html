@@ -266,6 +266,22 @@ input {
 .floatingicons span:nth-child(19){ left: 95%; animation-duration: 19s; }
 .floatingicons span:nth-child(20){ left: 98%; animation-duration: 21s; }
 
+  .login-link {
+  margin-top: 14px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
+.login-link a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
 /* Animation */
 @keyframes dropIcons {
   0% {
@@ -371,11 +387,11 @@ input {
     <div class="btn-group">
       <button type="submit">Signup</button>
       <button type="reset">Reset</button>
-      <p style="margin-top:10 px; text-align:center;">
-      Already have an account? 
-      <a href="login.html">Login</a>
-      </p>
     </div>
+    <p class="login-link">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
 
   </fieldset>
 </form>
