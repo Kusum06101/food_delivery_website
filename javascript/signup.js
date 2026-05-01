@@ -56,11 +56,3 @@ myForm.onsubmit = (e) => {
     window.location.href = "./login.html";
 };
 
-
-// Add Already Have Account text
-let loginText = document.createElement("p");
-loginText.innerHTML = `Already have an account? 
-<a href="./login.html">Login</a>`;
-loginText.style.marginTop = "10px";
-
-myForm.appendChild(loginText);
