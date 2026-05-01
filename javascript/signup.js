@@ -1,9 +1,13 @@
+// Signup Page JavaScript
+
 let myForm = document.querySelector('#signupForm');
 
 myForm.onsubmit = (e) => {
     e.preventDefault();
 
-    let inputBox = document.querySelectorAll('input:not([type="submit"]):not([type="reset"])');
+    let inputBox = document.querySelectorAll(
+        'input:not([type="submit"]):not([type="reset"])'
+    );
 
     let formData = {};
 
@@ -49,5 +53,14 @@ myForm.onsubmit = (e) => {
     alert("User Registered Successfully");
 
     // Redirect to login page
-    window.location.href = './login.html';
+    window.location.href = "./login.html";
 };
+
+
+// Add Already Have Account text
+let loginText = document.createElement("p");
+loginText.innerHTML = `Already have an account? 
+<a href="./login.html">Login</a>`;
+loginText.style.marginTop = "10px";
+
+myForm.appendChild(loginText);
