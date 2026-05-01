@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Login Page</title>
+
+<style>
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Animated Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+/* Login page */
+background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating shapes */
+.bg-shapes span {
+  position: absolute;
+  display: block;
+  background: rgba(255,255,255,0.2);
+  bottom: -150px;
+  border-radius: 50%;
+  animation: float 20s linear infinite;
+}
+
+.bg-shapes span:nth-child(1) {
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 12s;
+}
+.bg-shapes span:nth-child(2) {
+  left: 25%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 18s;
+}
+.bg-shapes span:nth-child(3) {
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 15s;
+}
+.bg-shapes span:nth-child(4) {
+  left: 75%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 20s;
+}
+.bg-shapes span:nth-child(5) {
+  left: 90%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 10s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+/* Glassmorphism */
+fieldset {
+  border: none;
+  padding: 25px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Title */
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f3e4e4;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 10px;
+  color: #e4dfdffb;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn-group button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Signup button */
+.btn-group button:first-child {
+  background: #328ba4f3;
+  color: white;
+}
+
+/* Reset button */
+.btn-group button:last-child {
+  background: #312f2f;
+  color: white;
+}
+/* Floating shopping icons */
+.floating-icons span {
+  position: absolute;
+  font-size: 40px;
+  bottom: -100px;
+  opacity: 0.6;
+  animation: floatIcons 18s linear infinite;
+}
+
+.floatingicons span {
+  position: absolute;
+  font-size: 32px;
+  top: -100px;
+  opacity: 0.6;
+  animation: dropIcons linear infinite;
+}
+
+/* Spread icons across screen */
+.floating-icons span:nth-child(1) { left: 5%;  animation-duration: 12s; }
+.floating-icons span:nth-child(2) { left: 15%; animation-duration: 18s; }
+.floating-icons span:nth-child(3) { left: 25%; animation-duration: 14s; }
+.floating-icons span:nth-child(4) { left: 35%; animation-duration: 20s; }
+.floating-icons span:nth-child(5) { left: 50%; animation-duration: 16s; }
+.floating-icons span:nth-child(6) { left: 65%; animation-duration: 22s; }
+.floating-icons span:nth-child(7) { left: 75%; animation-duration: 13s; }
+.floating-icons span:nth-child(8) { left: 85%; animation-duration: 19s; }
+.floating-icons span:nth-child(9) { left: 95%; animation-duration: 15s; }
+
+
+/* Animation */
+@keyframes dropIcons {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Animation */
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Floating shopping icons */
+.floatingicons span {
+  position: absolute;
+  font-size: 40px;
+  top: -100px; /* start above screen */
+  opacity: 0.6;
+  animation: dropIcons 18s linear infinite;
+}
+
+.floatingicons span {
+  position: absolute;
+  font-size: 32px;
+  top: -100px;
+  opacity: 0.6;
+  animation: dropIcons linear infinite;
+}
+
+/* Spread icons across screen */
+/* For .floatingicons */
+.floatingicons span:nth-child(1) { left: 5%;  animation-duration: 12s; }
+.floatingicons span:nth-child(2) { left: 15%; animation-duration: 18s; }
+.floatingicons span:nth-child(3) { left: 25%; animation-duration: 14s; }
+.floatingicons span:nth-child(4) { left: 35%; animation-duration: 20s; }
+.floatingicons span:nth-child(5) { left: 50%; animation-duration: 16s; }
+.floatingicons span:nth-child(6) { left: 65%; animation-duration: 22s; }
+.floatingicons span:nth-child(7) { left: 75%; animation-duration: 13s; }
+.floatingicons span:nth-child(8) { left: 85%; animation-duration: 19s; }
+.floatingicons span:nth-child(9) { left: 95%; animation-duration: 15s; }
+
+/* Animation */
+@keyframes dropIcons {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Falling animation */
+@keyframes dropIcons {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="floating-icons">
+  <span>🛒</span>
+  <span>🛍️</span>
+  <span>🏷️</span>
+  <span>💳</span>
+  <span>🎁</span>
+  <span>📦</span>
+  <span>🚚</span>
+  <span>💰</span>
+  <span>💵</span>
+  
+</div>
+<div class="floatingicons">
+  <span>🛒</span>
+  <span>🛍️</span>
+  <span>🏷️</span>
+  <span>💳</span>
+  <span>🎁</span>
+  <span>📦</span>
+  <span>🚚</span>
+  <span>💰</span>
+  <span>💵</span>
+  
+</div>
+<!-- Form -->
+<form id="loginForm">  <fieldset>
+    <legend>Welcome Back!!^_^</legend>
+    <label for="mail">Email:</label>
+    <input type="email" name="email" id="mail" required placeholder="Enter your Email">
+
+    <label for="pwd">Password:</label>
+    <input type="password" name="password" id="pwd" required placeholder="Enter Password">
+
+    <div class="btn-group">
+      <button type="submit">Login</button>
+      <button type="reset">Reset</button>
+    </div>
+
+  </fieldset>
+</form>
+
+</body>
+<script src="./javascript/login.js"></script>
+</html>

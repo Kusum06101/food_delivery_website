@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: coral;
+    color: aliceblue;
+}
+
+nav .nav-items {
+    display: flex;
+    gap: 15px;
+}
+nav h2{
+    font-size: 30px;
+}
+
+.nav-items a {
+    font-size: 20px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-items a:hover {
+    border-bottom: 2px solid;
+}
+
+#userImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* 1st container */
+.mainContainer {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+.content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+}
+.content h2{
+    font-size: 40px;
+}
+
+.content p {
+    font-size: 30px;
+}
+
+.content a {
+    background-color: coral;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.mainContainer img {
+    max-height: 400px;
+    max-width: 400px;
+
+}
+
+.category-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 40px;
+
+}
+
+.category-container aside {
+    display: flex;
+    gap: 20px;
+}
+
+.category-container aside div {
+    background-color: aliceblue;
+    background-color: coral;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* transition: all 2s linear; */
+}
+
+.category-container aside div:hover{
+    transform: scale(1.1,1.1);
+}
+footer{
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Search Filter CSS */
+.searchFilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+.searchFilter select{
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.searchFilter input{
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Food Container */
+#food-items {
+    height: 150vh;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#cart-items{
+    height: 75vh;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.food-cards{
+    height: 250px;
+    width:300px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.food-cards img{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+/* cart Summary */
+.cart-summary{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.btns button{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.btns button:first-child{
+    background-color: red;
+    color: aliceblue;
+}
+.btns button:last-child{
+    background-color: green;
+    color: aliceblue;
+}
+#remove-btn{
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: aliceblue;
+}

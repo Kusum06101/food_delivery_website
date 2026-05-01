@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- nav bar code -->
+    <nav>
+        <h2>PandaFoodCart🍽️</h2>
+        <aside class="nav-items">
+            <a href="./index.html">Home</a>
+            <a href="./Food.html">Food</a>
+            <a href="./cartPage.html">Cart</a>
+        </aside>
+        <aside class="personImage">
+            <img src="https://play-lh.googleusercontent.com/MI_8Eof1ZW6o7Q0_7yaiN2Kkyo_U6F_82i2XxYOvvI3re9JRoVCYDI-BiPVkVhL1Yw" alt="" id="userImage">
+        </aside>
+    </nav>
+
+    <!-- search box -->
+    <section class="searchFilter">
+        <select id="category" onchange="applyFilter()">
+            <option value="All">All</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Rolls">Rolls</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Biryani">Biryani</option>
+
+        </select>
+
+        <input type="search" id="searchBox" placeholder="search food ....." onkeyup="applyFilter()">
+    </section>
+
+    <!-- Food Container -->
+
+    <section id="food-items">
+
+    </section>
+
+    <!-- Footer code -->
+    <footer>
+        <h4>Built with ❤️ for food lovers</h1>
+    </footer>
+</body>
+<script src="./javascript/food.js"></script>
+
+</html>
